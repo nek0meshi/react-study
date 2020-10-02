@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  node:
+    image: node:14-alpine
+    ports:
+      - 3000:3000
+    volumes:
+      - ./my-app:/my-app:cached
+    tty: true
+    working_dir: /my-app
+
